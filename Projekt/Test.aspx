@@ -26,7 +26,28 @@
     </div>
 
     <script>
-        
+        var mymap = L.map('mapid').setView([62, -180], 13);
+        L.tileLayer('/Images/camping-site.jpg', {
+            attribution: 'Camping site',
+            minZoom: 1,
+            maxZoom: 1,
+            tileSize: L.point(977, 1106),
+            bounds: [[0, 0], [100, 100]],
+            noWrap: true,
+            tms: false,
+        }).addTo(mymap);
+
+        var myIcon = L.icon({
+            iconUrl: '/Images/marker-icon.png',
+            iconSize: [25, 41],
+            iconAnchor: [22, 94],
+            popupAnchor: [-3, -76],
+            shadowUrl: '/Images/marker-shadow.png',
+            shadowSize: [41, 41],
+            shadowAnchor: [22, 94]
+        });
+
+        var marker = L.marker([51.5, -0.09], { icon: myIcon }).addTo(mymap);
     </script>
 
     <div class="mb-3">
