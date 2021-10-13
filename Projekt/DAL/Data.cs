@@ -16,6 +16,7 @@ namespace Projekt.Classes
         #endregion
         Customer c = new Customer();
         #region Methods
+        /*
         public void InsertCustomer()
         {
             //Defines which SQL command to use
@@ -59,6 +60,7 @@ namespace Projekt.Classes
         {
 
         }
+        */
         #endregion
     }
 }
