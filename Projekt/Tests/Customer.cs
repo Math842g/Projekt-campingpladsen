@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace Campingplads.Tests
 {
@@ -15,7 +12,7 @@ namespace Campingplads.Tests
         public string LastName { get; set; }
         public string FullName => string.Format($"{FirstName} {LastName}");
         [Database("phone")]
-        public string PhoneNumber { get; set; }
+        public string Phone { get; set; }
         [Database("country")]
         public string Country { get; set; }
         [Database("city")]
@@ -26,14 +23,8 @@ namespace Campingplads.Tests
         public string Address { get; set; }
         [Database("email")]
         public string Email { get; set; }
-
-        private DateTime _dateOfBirth;
         [Database("date_of_birth")]
-        public DateTime DateOfBirth 
-        { 
-            get => _dateOfBirth.Date; 
-            set => _dateOfBirth = value; 
-        }
+        public string DateOfBirth { get; set; }
 
         public Customer()
         {
