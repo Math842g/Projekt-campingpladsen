@@ -172,7 +172,6 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="Test.aspx" />
-    <Content Include="test3.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -230,13 +229,6 @@
     </Compile>
     <Compile Include="Test.aspx.designer.cs">
       <DependentUpon>Test.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="test3.aspx.cs">
-      <DependentUpon>test3.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="test3.aspx.designer.cs">
-      <DependentUpon>test3.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tests\AttributeTest.cs" />
     <Compile Include="Tests\Customer.cs" />
