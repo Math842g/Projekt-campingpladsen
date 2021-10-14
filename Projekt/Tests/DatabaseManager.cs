@@ -13,23 +13,23 @@ namespace Campingplads.Tests
 {
     public class DatabaseManager : IDisposable
     {
-        private string ConnectionString = "Server=172.16.53.240;Database=Campingplads;User Id=Test;Password=Kode1234!;";
+        private readonly string ConnectionString = "Server=172.16.53.240;Database=Campingplads;User Id=Test;Password=Kode1234!;";
 
-        public T GetObject<T>(Dictionary<string, string> identifiers) where T: new()
+        public T GetObject<T>(Dictionary<string, string> identifiers) where T : new()
         {
             T obj = new();
 
-            using (SqlConnection sqlConnection = new SqlConnection(ConnectionString))
+            using (SqlConnection sqlConnection = new(ConnectionString))
             {
                 string objectName = obj.GetType().Name;
-                StringBuilder query = new StringBuilder();
+                StringBuilder query = new();
                 query.Append($"SELECT * FROM [{objectName}] WHERE ");
 
                 int count = 0;
                 foreach (var pair in identifiers)
                     query.Append($"[{pair.Key}] = '{pair.Value}' {(count++ != (identifiers.Count - 1) ? " AND " : "")}");
 
-                SqlCommand command = new SqlCommand(query.ToString(), sqlConnection);
+                SqlCommand command = new(query.ToString(), sqlConnection);
                 try
                 {
                     sqlConnection.Open();
@@ -70,7 +70,8 @@ namespace Campingplads.Tests
                         continue;
                     }
                     DatabaseAttribute databaseObject = (DatabaseAttribute)propertyInfo.GetCustomAttribute(typeof(DatabaseAttribute));
-                    queryBuilder.Append($"[{databaseObject.DbName}] = '{propertyInfo.GetValue(_object)}', ");
+                    if (databaseObject != null)
+                        queryBuilder.Append($"[{databaseObject.DbName}] = '{propertyInfo.GetValue(_object)}', ");
                 }
                 queryBuilder.Append($"WHERE [id] = '{id}'");
                 string query = queryBuilder.ToString().Replace(", WHERE", " WHERE");
@@ -81,7 +82,7 @@ namespace Campingplads.Tests
                     connection.Open();
                     command.ExecuteNonQuery();
                 }
-                catch(SqlException ex)
+                catch (SqlException ex)
                 {
                     Console.WriteLine(ex.ToString());
                 }
@@ -94,25 +95,37 @@ namespace Campingplads.Tests
 
         public void AddObject<T>(T _object)
         {
-            StringBuilder query = new();
-
             using (SqlConnection connection = new(ConnectionString))
             {
-                query.Append($"INSERT INTO [{_object.GetType().Name}]");
+                using (SqlCommand command = new($"insert_{_object.GetType().Name.ToLower()}", connection)
+                {
+                    CommandType = CommandType.StoredProcedure
+                })
+                {
+                    foreach (var propertyInfo in _object.GetType().GetProperties())
+                    {
+                        if (propertyInfo.CanRead)
+                        {
+                            if (propertyInfo.Name.Equals("ID"))
+                                continue;
+                            if (propertyInfo.GetCustomAttribute(typeof(DatabaseAttribute)) != null)
+                                command.Parameters.AddWithValue($"@{propertyInfo.Name}", propertyInfo.GetValue(_object));
+                        }
+                    }
 
-                SqlCommand command = new(query.ToString());
-                try
-                {
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                }
-                catch (SqlException ex)
-                {
-
-                }
-                finally
-                {
-                    connection.Close();
+                    try
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                    }
+                    catch (SqlException ex)
+                    {
+                        Console.WriteLine(ex);
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
                 }
             }
         }

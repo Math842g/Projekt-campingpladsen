@@ -19,17 +19,7 @@ namespace Campingplads
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            using (DatabaseManager manager = new DatabaseManager())
-            {
-                var customer = manager.GetObject<Customer>(new Dictionary<string, string>()
-                {
-                    { "id", "1" }
-                });
-                testLabel.Text = JsonConvert.SerializeObject(customer);
-                customer.FirstName = "Yeet";
-                manager.UpdateObject(customer);
-                testLabel2.Text = JsonConvert.SerializeObject(customer);
-            }
+
         }
     }
 }
