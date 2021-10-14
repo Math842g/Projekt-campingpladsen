@@ -7,11 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Projekt
+namespace Campingplads
 {
 
 
-    public partial class index
+    public partial class Test
     {
     }
 }

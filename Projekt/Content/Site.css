@@ -29,3 +29,54 @@ textarea {
         padding: 0;
     }
 }
+
+.quick-book {
+    margin: -75px auto auto auto;
+    width: 120vh;
+    height: 15vh;
+}
+
+.quick-book input {
+    outline: none;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.quick-book input:hover {
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+.quick-book input:active,
+.quick-book input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.quick-book input:read-only {
+    background-color: white;
+}
+
+.quick-book button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 0px;
+    font-size: 16px;
+}
+
+.quick-book .btn-book {
+    border-radius: 2px;
+}
+
+.quick-book .btn-book:hover,
+.quick-book .btn-book:focus,
+.quick-book .btn-book:active {
+   background-color: green !important;
+   color: white;
+}
+
