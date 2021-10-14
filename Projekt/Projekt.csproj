@@ -216,6 +216,9 @@
     <Compile Include="Tests\Customer.cs" />
     <Compile Include="Tests\DatabaseAttribute.cs" />
     <Compile Include="Tests\DatabaseManager.cs" />
+    <Compile Include="Tests\Item.cs" />
+    <Compile Include="Tests\Order.cs" />
+    <Compile Include="Tests\Spot.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

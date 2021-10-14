@@ -8,7 +8,7 @@ namespace Campingplads.Tests
     public class Customer
     {
         [Database("id")]
-        public int ID { get; set; }
+        public int CustomerId { get; set; }
         [Database("first_name")]
         public string FirstName { get; set; }
         [Database("last_name")]
