@@ -1,0 +1,122 @@
+﻿.quick-book {
+    margin: -75px auto auto auto;
+    width: 70vh;
+    min-height: 15vh;
+    height: auto;
+}
+
+    .quick-book input, .quick-book select {
+        outline: none;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+
+        .quick-book input:hover {
+            border-bottom: 1px solid rgba(0, 0, 0, 1);
+        }
+
+        .quick-book input:active,
+        .quick-book input:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .quick-book input:read-only {
+            background-color: white;
+        }
+
+    .quick-book button {
+        width: 100%;
+        padding: 15px;
+        border-radius: 0px;
+        font-size: 16px;
+    }
+
+    .quick-book .btn-book {
+        border-radius: 2px;
+    }
+
+        .quick-book .btn-book:hover,
+        .quick-book .btn-book:focus,
+        .quick-book .btn-book:active {
+            background-color: green !important;
+            color: white;
+        }
+
+input {
+    outline: none !important;
+    border-top: 0px !important;
+    border-left: 0px !important;
+    border-right: 0px !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
+    border-radius: 0 !important;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+    input:hover {
+        border-bottom: 1px solid rgba(0, 0, 0, 1) !important;
+    }
+
+    input:active,
+    input:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+
+    input:read-only {
+        background-color: white;
+    }
+
+button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 0px;
+    font-size: 16px;
+}
+
+.btn-book {
+    border-radius: 2px;
+}
+
+    .btn-book:hover,
+    .btn-book:focus,
+    .btn-book:active {
+        background-color: green !important;
+        color: white;
+    }
+
+.form-control[readonly].no-gray {
+    background-color: white;
+}
+
+.date-range {
+    width: 128px;
+    justify-content: center;
+    text-align: center;
+}
+
+#mapid {
+    height: 800px;
+    width: auto;
+}
+
+.quick-book input[type=text].form-control-bigger {
+    width: 280px;
+}
+
+.quick-book select {
+    width: 270px;
+}
+
+.quick-book input[type=submit] {
+    border: 1px solid #000 !important;
+    min-height: 100%;
+}

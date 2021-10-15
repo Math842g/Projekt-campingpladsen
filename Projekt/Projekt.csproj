@@ -113,22 +113,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.aspx" />
-    <Content Include="Content\baguetteBox.min.css" />
-    <Content Include="Content\bootstrap-datepicker.css" />
-    <Content Include="Content\bootstrap-datepicker.min.css" />
-    <Content Include="Content\bootstrap-datepicker.standalone.min.css" />
-    <Content Include="Content\bootstrap-datepicker3.min.css" />
-    <Content Include="Content\bootstrap-datepicker3.standalone.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
-    <Content Include="Content\bootstrap-utilities.min.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\font-awesome.min.css" />
-    <Content Include="Content\googleapi-merriweather.css" />
-    <Content Include="Content\googleapi-open+sans.css" />
-    <Content Include="Content\leaflet.css" />
-    <Content Include="Content\Site.css" />
+    <Content Include="css\site.min.css" />
+    <Content Include="css\vendor\bootstrap\bootstrap.min.css" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -136,61 +122,54 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Images\layers-2x.png" />
-    <Content Include="Images\layers.png" />
-    <Content Include="Images\marker-icon-2x.png" />
-    <Content Include="Images\marker-icon.png" />
-    <Content Include="Images\marker-shadow.png" />
-    <Content Include="index.aspx" />
-    <Content Include="Scripts\bootstrap-datepicker.min.js" />
-    <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.esm.min.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-3.6.0.min.js" />
-    <Content Include="Scripts\leaflet.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Scripts\WebForms\DetailsView.js" />
-    <Content Include="Scripts\WebForms\Focus.js" />
-    <Content Include="Scripts\WebForms\GridView.js" />
-    <Content Include="Scripts\WebForms\Menu.js" />
-    <Content Include="Scripts\WebForms\MenuStandards.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
-    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
-    <Content Include="Scripts\WebForms\SmartNav.js" />
-    <Content Include="Scripts\WebForms\TreeView.js" />
-    <Content Include="Scripts\WebForms\WebForms.js" />
-    <Content Include="Scripts\WebForms\WebParts.js" />
-    <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Site.Master" />
+    <Content Include="images\camping-site.jpg" />
+    <Content Include="images\layers-2x.png" />
+    <Content Include="images\layers.png" />
+    <Content Include="images\camping-background.jpg" />
+    <Content Include="images\marker-icon-2x.png" />
+    <Content Include="images\marker-icon.png" />
+    <Content Include="images\marker-shadow.png" />
+    <Content Include="js\site.min.js" />
+    <Content Include="js\bootstrap-datepicker.min.js" />
+    <Content Include="js\bootstrap.bundle.min.js" />
+    <Content Include="js\bootstrap.esm.min.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-3.6.0.min.js" />
+    <Content Include="js\leaflet.js" />
+    <Content Include="js\modernizr-2.8.3.js" />
+    <Content Include="js\site.js" />
+    <Content Include="js\WebForms\DetailsView.js" />
+    <Content Include="js\WebForms\Focus.js" />
+    <Content Include="js\WebForms\GridView.js" />
+    <Content Include="js\WebForms\Menu.js" />
+    <Content Include="js\WebForms\MenuStandards.js" />
+    <Content Include="js\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="js\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="js\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="js\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="js\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="js\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="js\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="js\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="js\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="js\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="js\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="js\WebForms\SmartNav.js" />
+    <Content Include="js\WebForms\TreeView.js" />
+    <Content Include="js\WebForms\WebForms.js" />
+    <Content Include="js\WebForms\WebParts.js" />
+    <Content Include="js\WebForms\WebUIValidation.js" />
     <Content Include="Test.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
-    <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="BussinesLogic\Customer.cs" />
-    <Compile Include="BussinesLogic\Price.cs" />
-    <Compile Include="DAL\Data.cs" />
-    <Compile Include="BussinesLogic\Logic.cs" />
+    <Compile Include="Data\Customer.cs" />
+    <Compile Include="Data\MachineLearning\SpotData.cs" />
+    <Compile Include="Data\OrderItem.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -201,28 +180,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Site.Master.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Master.designer.cs">
-      <DependentUpon>Site.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site.Mobile.Master.designer.cs">
-      <DependentUpon>Site.Mobile.Master</DependentUpon>
-    </Compile>
     <Compile Include="Test.aspx.cs">
       <DependentUpon>Test.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -230,13 +188,11 @@
     <Compile Include="Test.aspx.designer.cs">
       <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Tests\AttributeTest.cs" />
-    <Compile Include="Tests\Customer.cs" />
-    <Compile Include="Tests\DatabaseAttribute.cs" />
-    <Compile Include="Tests\DatabaseManager.cs" />
-    <Compile Include="Tests\Item.cs" />
-    <Compile Include="Tests\Order.cs" />
-    <Compile Include="Tests\Spot.cs" />
+    <Compile Include="Data\DatabaseAttribute.cs" />
+    <Compile Include="Data\DatabaseManager.cs" />
+    <Compile Include="Data\Item.cs" />
+    <Compile Include="Data\Order.cs" />
+    <Compile Include="Data\Spot.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -248,6 +204,7 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="SpotRecommenderModel.mbconfig" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

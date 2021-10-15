@@ -1,0 +1,90 @@
+﻿{
+  "TrainingTime": 60,
+  "Scenario": "Recommendation",
+  "DataSource": {
+    "Type": "SQL",
+    "Version": 1,
+    "ColumnProperties": [
+      {
+        "ColumnName": "customer_id",
+        "ColumnPurpose": "User",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "spot_id",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "adults",
+        "ColumnPurpose": "Item",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "children",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      },
+      {
+        "ColumnName": "pets",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 1
+      }
+    ],
+    "ConnectionString": "Data Source=172.16.53.240;Initial Catalog=Campingplads;Persist Security Info=True;User ID=Test",
+    "CommandString": "SELECT CAST(customer_id as REAL), CAST(spot_id as REAL), CAST(adults as REAL), CAST(children as REAL), CAST(pets as REAL) FROM [dbo].[customer_spot_data]",
+    "DatabaseName": "Campingplads",
+    "SelectedTableDbo": "dbo",
+    "TableName": "customer_spot_data"
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 0,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -0.0488,
+        "RuntimeInSeconds": 4.4
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -0.0254,
+        "RuntimeInSeconds": 4.3
+      },
+      {
+        "Version": 0,
+        "Type": "Trial",
+        "TrainerName": "MatrixFactorization",
+        "Score": -0.0606,
+        "RuntimeInSeconds": 4.2
+      }
+    ],
+    "Pipeline": "[{\"EstimatorType\":\"OneHotHashEncoding\",\"Inputs\":[\"children\",\"pets\"],\"Outputs\":[\"children\",\"pets\"]},{\"EstimatorType\":\"MapValueToKey\",\"Inputs\":[\"customer_id\"],\"Outputs\":[\"customer_id\"]},{\"EstimatorType\":\"MapValueToKey\",\"Inputs\":[\"adults\"],\"Outputs\":[\"adults\"]},{\"LabelColumnName\":\"spot_id\",\"MatrixColumnIndexColumnName\":\"customer_id\",\"MatrixRowIndexColumnName\":\"adults\",\"ApproximationRank\":\"128\",\"LearningRate\":\"0.01\",\"NumberOfIterations\":\"20\",\"EstimatorType\":\"MatrixFactorization\",\"Inputs\":[\"Features\"],\"Outputs\":[\"Score\"]}]",
+    "MetricName": "RSquared"
+  },
+  "Type": "TrainingConfig",
+  "Version": 1
+}
